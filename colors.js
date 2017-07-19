@@ -8,7 +8,7 @@
 	} else {
 		root.Colors = factory(root);
 	}
-}(this, function(window, undefined) {
+}(window, function(window, undefined) {
 	"use strict"
 
 	var _valueRanges = {
@@ -52,7 +52,7 @@
 			}
 			customBG = _options.customBG;
 			_options.customBG = (typeof customBG === 'string') ? ColorConverter.txt2color(customBG).rgb : customBG;
-			_colors = setColor(THIS.colors, _options.color, undefined, true); // THIS.colors = _colors = 
+			_colors = setColor(THIS.colors, _options.color, undefined, true); // THIS.colors = _colors =
 		},
 		focusInstance = function(THIS) {
 			if (_instance !== THIS) {
@@ -187,7 +187,7 @@
 			alpha = colors.alpha,
 			luminance = 'luminance',
 			background = colors.background,
-			rgbaMixBlack, rgbaMixWhite, rgbaMixCustom, 
+			rgbaMixBlack, rgbaMixWhite, rgbaMixCustom,
 			rgbaMixBG, rgbaMixBGMixBlack, rgbaMixBGMixWhite, rgbaMixBGMixCustom;
 
 		rgbaMixBlack = mixColors(rgb, {r: 0, g: 0, b: 0}, alpha, 1);
@@ -266,7 +266,7 @@
 					!isHex ? HSL.h + ', ' + HSL.s + '%, ' + HSL.l + '%' :
 					'#' + colors.HEX;
 
-			return isHex ? innerText : (shouldBeHex ? 'rgb' : colorMode) + 
+			return isHex ? innerText : (shouldBeHex ? 'rgb' : colorMode) +
 				(hasAlpha ? 'a' : '') + '(' + innerText +
 				(hasAlpha ? ', ' + alpha : '') + ')';
 		},
