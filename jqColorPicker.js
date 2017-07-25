@@ -114,7 +114,7 @@
             })
             .off('.tcp').on(_pointerdown,
                 '.cp-xy-slider,.cp-z-slider,.cp-alpha', pointerdown);
-        } else if (_colorPicker.$trigger) {
+        } else if (_colorPicker.$trigger && _options.hideOnClickAway) {
             $(_$UI).hide(_options.animationSpeed, function() {
                 preRender(false);
                 _colorPicker.$trigger = null;
@@ -289,6 +289,7 @@
             // cssAddon: '',
             // margin: '',
             // preventFocus: false
+            hideOnClickAway: true
         }, options);
 
         !_colorPicker && options.scrollResize && $(window)
