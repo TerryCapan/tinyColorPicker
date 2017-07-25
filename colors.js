@@ -8,7 +8,7 @@
 	} else {
 		root.Colors = factory(root);
 	}
-}(this, function(window, undefined) {
+}(window, function(window, undefined) {
 	"use strict"
 
 	var _valueRanges = {
